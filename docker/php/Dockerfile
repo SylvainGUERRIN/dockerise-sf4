@@ -1,5 +1,7 @@
 FROM php:7.2-fpm
 
+RUN adduser -home /home/exploit exploit -u 1000
+
 RUN docker-php-ext-install pdo_mysql
 
 RUN pecl install apcu
